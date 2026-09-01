@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyton3d"
+version = "0.1.0"
+description = "A pure-Python 6-DOF 3D rigid body physics simulation engine and interactive CAD workbench built from scratch."
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Aditya Raj", email = "adityarajIITj@users.noreply.github.com" }
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Operating System :: OS Independent"
+]
+keywords = [
+    "physics", "simulation", "3d", "rigid-body", "dynamics",
+    "cad", "kinematics", "quaternion", "collision-detection", "sat"
+]
+dependencies = [
+    "numpy>=1.20.0",
+    "matplotlib>=3.5.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/adityarajIITj/pyton3d"
+Repository = "https://github.com/adityarajIITj/pyton3d.git"
+Documentation = "https://github.com/adityarajIITj/pyton3d#readme"
+"Bug Tracker" = "https://github.com/adityarajIITj/pyton3d/issues"
+
+[project.scripts]
+pyton3d = "pyton3d:main"
+
+[tool.setuptools]
+packages = ["pyton3d"]
