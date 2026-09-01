@@ -430,4 +430,4 @@ print(f"Range: {cannonball.position.x:.2f} m | Flight Time: {time_elapsed:.2f} s
 ## License & Support
 Pyton3D is open-source software licensed under the **MIT License**.  
 For issues, contributions, and documentation, visit:  
-**https://github.com/adityarajIITj/pyton3d**
+**https://github.com/adityarajIITj/pyton3d_package**

@@ -202,6 +202,7 @@ Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
 
 ## Author
 
-**Aditya Raj**  
+**[Aditya Raj](mailto:b25bs1020@iitj.ac.in)**  
 Indian Institute of Technology Jodhpur (IIT Jodhpur)  
+Email: [b25bs1020@iitj.ac.in](mailto:b25bs1020@iitj.ac.in)  
 GitHub: [@adityarajIITj](https://github.com/adityarajIITj)

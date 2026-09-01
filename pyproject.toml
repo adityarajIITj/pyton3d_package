@@ -9,7 +9,7 @@ description = "A pure-Python 6-DOF 3D rigid body physics simulation engine and i
 readme = "README.md"
 license = "MIT"
 authors = [
-    { name = "Aditya Raj", email = "adityarajIITj@users.noreply.github.com" }
+    { name = "Aditya Raj", email = "b25bs1020@iitj.ac.in" }
 ]
 requires-python = ">=3.9"
 classifiers = [
