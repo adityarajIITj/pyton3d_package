@@ -1624,6 +1624,8 @@ class PhysicsStudioApp:
         self._build_toolbar()
         self._build_main_layout()
 
+        # Load initial demo
+        SceneManager.load_preset(self.world, "mixed")
         self.update_scene_tree()
 
         # Start animation loop
@@ -2137,10 +2139,14 @@ class EmbeddedMatplotlibRenderer:
 # SECTION 12: MAIN ENTRY POINT
 # ============================================================================
 
-def main():
+def launch_studio(world: Optional['PhysicsWorld'] = None):
+    """Launch the interactive 3D Physics Simulation Studio and CAD Workbench."""
     root = tk.Tk()
-    app = PhysicsStudioApp(root)
+    app = PhysicsStudioApp(root, world=world)
     root.mainloop()
+
+def main():
+    launch_studio()
 
 if __name__ == "__main__":
     main()
