@@ -174,6 +174,28 @@ Pyton3D includes 7 pre-configured classical mechanics labs:
 
 ---
 
+---
+
+## Official PyPI Package and Library Distribution
+
+Pyton3D is officially published on PyPI as an installable open-source library. The dedicated package repository is maintained at [**github.com/adityarajIITj/pyton3d_package**](https://github.com/adityarajIITj/pyton3d_package).
+
+### Features Included in the `pyton3d` Package:
+- **Standalone Pip Installation**: Install anywhere with `pip install pyton3d`.
+- **Zero-Overhead Headless Execution**: Run simulations programmatically in servers, headless environments, CI pipelines, and robotics workflows without display servers.
+- **Complete 6-DOF Dynamics**: Accurate tracking of mass, linear/angular velocity, quaternions, and world-space inertia tensors.
+- **4 Numerical Integrators**: Built-in support for Symplectic Euler, Velocity Verlet, Runge-Kutta 4th Order (RK4), and Explicit Euler.
+- **15-Axis SAT Collision Pipeline**: High-precision narrow-phase Separating Axis Theorem for Oriented Bounding Boxes (OBB), Spheres, and Half-Space Planes.
+- **Impulse Solver with Coulomb Friction**: Iterative normal impulse resolution, 2-axis orthogonal Coulomb dry friction cones, and Baumgarte penetration stabilization.
+- **Constraints and Multi-Body Joints**: Damped harmonic springs (`SpringConstraint`) and rigid inelastic rods (`DistanceConstraint`).
+- **Environmental Force Generators**: Linear/quadratic aerodynamic drag and Archimedes fluid buoyancy.
+- **7 Classical Mechanics Demonstration Labs**: One-line programmatic loading of `stack`, `spheres`, `mixed`, `springs`, `jenga`, `buoyancy`, and `cradle`.
+- **Terminal Simulation Telemetry**: Real-time ASCII progress tables logging body elevations, velocities, contact manifolds, and kinetic energy.
+- **Programmatic CAD Studio Launcher**: Instant access to the interactive 3D desktop workbench via `pyton3d.launch_studio()`.
+- **Automated Test Suite**: Complete unit and property tests verifying mathematical correctness, collision response, and dynamic stability (`pytest tests/ -v`).
+
+---
+
 ## Installation and Usage
 
 ### Prerequisites
