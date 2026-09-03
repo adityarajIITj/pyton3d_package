@@ -41,6 +41,8 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection, Line3DCollection
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 
+__version__ = "0.2.0"
+
 
 # ============================================================================
 # SECTION 1: CORE MATHEMATICS

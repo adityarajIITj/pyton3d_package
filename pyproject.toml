@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyton3d"
-version = "0.1.0"
+version = "0.2.0"
 description = "A pure-Python 6-DOF 3D rigid body physics simulation engine and interactive CAD workbench built from scratch."
 readme = "README.md"
 license = "MIT"
