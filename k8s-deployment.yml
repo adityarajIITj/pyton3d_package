@@ -1,0 +1,48 @@
+# Kubernetes deployment manifest for pyton3d
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pyton3d
+  labels:
+    app: pyton3d
+    version: "0.2.0"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pyton3d
+  template:
+    metadata:
+      labels:
+        app: pyton3d
+    spec:
+      containers:
+        - name: pyton3d
+          image: pyton3d:latest
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
+            limits:
+              cpu: "1000m"
+              memory: "512Mi"
+          env:
+            - name: PYTON3D_LOG_LEVEL
+              value: "INFO"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pyton3d-service
+  labels:
+    app: pyton3d
+spec:
+  type: ClusterIP
+  selector:
+    app: pyton3d
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP

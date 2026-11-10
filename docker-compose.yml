@@ -1,0 +1,37 @@
+# Docker Compose configuration for pyton3d
+# A lightweight 3D physics simulation engine
+version: "3.9"
+
+services:
+  pyton3d:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pyton3d:latest
+    container_name: pyton3d-sim
+    volumes:
+      - ./examples:/app/examples
+      - sim-output:/app/output
+    environment:
+      - PYTON3D_LOG_LEVEL=INFO
+      - PYTON3D_MAX_STEPS=10000
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    command: ["python", "-m", "pyton3d"]
+
+  pyton3d-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pyton3d:latest
+    container_name: pyton3d-tests
+    volumes:
+      - ./tests:/app/tests
+    command: ["python", "-m", "pytest", "tests/", "-v"]
+    profiles:
+      - testing
+
+volumes:
+  sim-output:
+    driver: local
